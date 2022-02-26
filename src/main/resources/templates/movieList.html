@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mato</title>
+  </head>
+  <body>
+    Hello
+    <table class="border: 1px solid; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Movie Desc</th>
+          <th>Actor Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="movie : ${ movies }">
+          <td th:text="${movie.name}"></td>
+          <td th:text="${movie.desc}"></td>
+          <td th:text="${movie.actor}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
